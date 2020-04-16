@@ -10,6 +10,8 @@ namespace CetBookStore.Models
         public int Id{ get; set; }
         public string Title { get; set; }
         public string Detail { get; set; }
+        
+        public int? Rating { get; set; }
         public DateTime CreatedDate { get; set; }
 
         public int BookId { get; set; }

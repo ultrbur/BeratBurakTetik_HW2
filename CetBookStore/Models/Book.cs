@@ -13,6 +13,7 @@ namespace CetBookStore.Models
 
         [StringLength(512, MinimumLength =3)]
         [Required]
+        [Display(Name ="Kitap Adı")]
         public string Title { get; set; } // nvarchar(512), not nullable
         public int? PageCount { get; set; }
 
