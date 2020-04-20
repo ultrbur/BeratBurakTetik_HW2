@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.Extensions.Logging;
 using CetBookStore.Models;
+using CetBookStore.ViewModel;
 
 namespace CetBookStore.Controllers
 {
@@ -32,6 +33,17 @@ namespace CetBookStore.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public async Task<IActionResult> Search()
+        {
+            return View();
+        }
+        [HttpPost]
+        public async Task<IActionResult> Search(SearchViewModel searchModel)
+        {
+            var title = searchModel.SearchText;
+            return View();
         }
     }
 }
